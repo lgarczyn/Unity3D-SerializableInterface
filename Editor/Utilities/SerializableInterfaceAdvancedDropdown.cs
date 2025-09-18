@@ -59,11 +59,7 @@ namespace TNRD.Utilities
                 item.AddChild(new AssetsItemBuilder(interfaceType).Build());
                 item.AddChild(new SceneItemBuilder(interfaceType, relevantScene).Build());
             }
-
-            foreach (AdvancedDropdownItem dropdownItem in item.children)
-            {
-                dropdownItem.AddChild(new NoneDropdownItem());
-            }
+            item.AddChild(new NoneDropdownItem());
 
             if (canSort)
             {
